@@ -1,0 +1,53 @@
+{
+  "projects": [
+    {
+      "slug": "vikara-voice-agent",
+      "title": "Vikara Voice Agent",
+      "description": "Real-time conversational AI with voice streaming, powered by WebSocket and Google Gemini.",
+      "longDescription": "A full-stack voice AI system that enables natural spoken conversations with an AI agent. Features real-time speech-to-text, intelligent response generation via Google Gemini 2.0, and text-to-speech synthesis — all streaming over WebSocket for minimal latency.",
+      "category": "Voice AI",
+      "featured": true,
+      "tech": ["React", "TypeScript", "Node.js", "WebSocket", "Google Gemini", "Vercel"],
+      "impact": "Real-time voice AI with sub-second latency",
+      "github": "https://github.com/Anshit2723/vikara-voice-agent",
+      "demo": "https://vikara-voice-agent.vercel.app/",
+      "image": "/images/projects/vikara.png"
+    },
+    {
+      "slug": "ai-iq-team",
+      "title": "AI-IQ-TEAM",
+      "description": "AI-powered interview quality analysis with a 5-stage cognitive evaluation pipeline.",
+      "longDescription": "An intelligent system that evaluates interview quality through a multi-stage pipeline: Scribe (transcription) → Mapper (intent matching) → Detective (evidence extraction) → Judge (scoring) → Coach (feedback). Every score traces back to specific evidence — no score without proof.",
+      "category": "Production AI",
+      "featured": true,
+      "tech": ["React", "FastAPI", "Python", "Google Gemini", "MongoDB"],
+      "impact": "5-stage evidence-based evaluation pipeline",
+      "github": "https://github.com/Anshit2723/AI-IQ-TEAM",
+      "image": "/images/projects/ai-iq-team.png"
+    },
+    {
+      "slug": "computer-vision-classifier",
+      "title": "Excel Image Classifier",
+      "description": "CNN-based image classification system for automated visual quality analysis.",
+      "longDescription": "A computer vision system built for a Dubai-based client to automate image classification from Excel spreadsheets. Uses a custom CNN pipeline for image segmentation and classification, achieving 95% accuracy and reducing manual QA time by 80%.",
+      "category": "Computer Vision",
+      "featured": true,
+      "tech": ["Python", "TensorFlow", "CNN", "OpenCV", "Pandas"],
+      "impact": "95% accuracy, 80% time reduction",
+      "image": "/images/projects/cv-classifier.png"
+    },
+    {
+      "slug": "hr-autoletter",
+      "title": "HR AutoLetter",
+      "description": "Automated offer letter generation from salary spreadsheets with template matching.",
+      "longDescription": "A React/TypeScript application that streamlines HR offer letter generation. Upload a salary calculation Excel sheet, select an employee, and generate a pixel-accurate offer letter matching the company template. Supports both HTML and custom DOCX templates.",
+      "category": "Automation",
+      "featured": false,
+      "tech": ["React", "TypeScript", "Vite", "Google Gemini", "docxtemplater"],
+      "impact": "Automated end-to-end offer letter workflow",
+      "github": "https://github.com/Anshit2723/hr-autoletter",
+      "image": "/images/projects/hr-autoletter.png"
+    }
+  ],
+  "categories": ["All", "Production AI", "Voice AI", "Computer Vision", "Automation"]
+}

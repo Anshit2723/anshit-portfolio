@@ -1,0 +1,258 @@
+@import "tailwindcss";
+@import "tailwindcss/theme" theme(reference);
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ── Theme tokens ────────────────────────────── */
+
+:root {
+  color-scheme: light;
+
+  /* Warm off-white + gold accent */
+  --color-bg: #FAFAF8;
+  --color-bg-elevated: #FFFFFF;
+  --color-bg-hover: #F5F4F1;
+  --color-border: #E7E5E4;
+  --color-border-subtle: #F5F5F4;
+  --color-text: #1C1917;
+  --color-text-secondary: #44403C;
+  --color-text-muted: #78716C;
+  --color-text-faint: #A8A29E;
+
+  /* Gold accent — AA contrast on white */
+  --color-accent: #B8860B;
+  --color-accent-dim: #996F0A;
+  --color-accent-bright: #D4A017;
+  --color-accent-glow: rgba(184, 134, 11, 0.08);
+
+  /* Gradients */
+  --color-grad-start: #996F0A;
+  --color-grad-mid: #B8860B;
+  --color-grad-end: #D4A017;
+
+  /* Card shadows */
+  --card-shadow: 0 1px 3px rgba(28, 25, 23, 0.06), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --card-shadow-hover: 0 4px 12px rgba(28, 25, 23, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+
+  /* Scrollbar */
+  --scrollbar-thumb: #D6D3D1;
+  --scrollbar-thumb-hover: #A8A29E;
+
+  /* Selection */
+  --selection-bg: rgba(184, 134, 11, 0.15);
+  --selection-color: #1C1917;
+
+  /* Noise */
+  --noise-opacity: 0.018;
+
+  /* Ambient */
+  --ambient-color: rgba(184, 134, 11, 0.04);
+
+  /* Glow */
+  --glow-outer: rgba(184, 134, 11, 0.03);
+}
+
+.dark {
+  color-scheme: dark;
+
+  /* Warm stone dark palette */
+  --color-bg: #0c0a09;
+  --color-bg-elevated: #1c1917;
+  --color-bg-hover: #292524;
+  --color-border: #44403c;
+  --color-border-subtle: #292524;
+  --color-text: #fafaf9;
+  --color-text-secondary: #d6d3d1;
+  --color-text-muted: #a8a29e;
+  --color-text-faint: #78716c;
+
+  /* Gold accent — brighter for dark bg */
+  --color-accent: #e7c67e;
+  --color-accent-dim: #c2956b;
+  --color-accent-bright: #f5d799;
+  --color-accent-glow: rgba(231, 198, 126, 0.12);
+
+  /* Gradients */
+  --color-grad-start: #c2956b;
+  --color-grad-mid: #e7c67e;
+  --color-grad-end: #f5d799;
+
+  /* Card — border-only in dark (shadows invisible on dark bg) */
+  --card-shadow: none;
+  --card-shadow-hover: none;
+
+  /* Scrollbar */
+  --scrollbar-thumb: #44403c;
+  --scrollbar-thumb-hover: #57534e;
+
+  /* Selection */
+  --selection-bg: rgba(231, 198, 126, 0.2);
+  --selection-color: #fafaf9;
+
+  /* Noise */
+  --noise-opacity: 0.03;
+
+  /* Ambient */
+  --ambient-color: rgba(231, 198, 126, 0.03);
+
+  /* Glow — stronger on dark */
+  --glow-outer: rgba(231, 198, 126, 0.06);
+}
+
+/* ── Base ─────────────────────────────────────── */
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-color);
+}
+
+/* ── Scrollbar ────────────────────────────────── */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+
+/* ── Utility classes ──────────────────────────── */
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-grad-start), var(--color-grad-mid), var(--color-grad-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-animated {
+  background: linear-gradient(
+    270deg,
+    var(--color-grad-start),
+    var(--color-grad-mid),
+    var(--color-grad-end),
+    var(--color-grad-start)
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glow effect */
+.glow {
+  box-shadow:
+    0 0 15px var(--color-accent-glow),
+    0 0 40px var(--glow-outer);
+}
+
+/* Ambient radial gradient background */
+.ambient-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 40%,
+    var(--ambient-color) 0%,
+    transparent 70%
+  );
+}
+
+/* Noise texture */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  opacity: var(--noise-opacity);
+  pointer-events: none;
+  z-index: 100;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Section divider */
+.section-divider {
+  width: 200px;
+  height: 1px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
+/* Card surface — shadows for light, border-emphasis for dark */
+.card-surface {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s, background-color 0.3s;
+}
+.card-surface:hover {
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--color-border);
+}
+
+/* ── Prose / MDX ──────────────────────────────── */
+
+.prose {
+  --tw-prose-body: var(--color-text-secondary);
+  --tw-prose-headings: var(--color-text);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-text);
+  --tw-prose-counters: var(--color-text-muted);
+  --tw-prose-bullets: var(--color-text-faint);
+  --tw-prose-hr: var(--color-border);
+  --tw-prose-quotes: var(--color-text-secondary);
+  --tw-prose-quote-borders: var(--color-accent);
+  --tw-prose-code: var(--color-text);
+  --tw-prose-pre-code: var(--color-text-secondary);
+  --tw-prose-pre-bg: var(--color-bg-hover);
+}
+
+.prose code::before,
+.prose code::after { display: none; }
+
+.prose code {
+  background: rgba(184, 134, 11, 0.06);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25em;
+  font-size: 0.875em;
+  font-family: var(--font-mono);
+}
+
+.dark .prose code {
+  background: rgba(231, 198, 126, 0.1);
+}
+
+.prose pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* ── Custom cursor (hidden native) ────────────── */
+
+.cursor-none,
+.cursor-none * {
+  cursor: none !important;
+}

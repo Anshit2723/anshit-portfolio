@@ -1,0 +1,26 @@
+{
+  "name": "Anshit Chaturvedi",
+  "title": "Lead AI Engineer",
+  "tagline": "Building production AI systems that 450-person companies depend on daily.",
+  "description": "Founding engineer of an enterprise AI Lab. I design and ship agentic systems, conversational AI, and automation pipelines that teams depend on daily.",
+  "email": "chaturvedi.anshit@gmail.com",
+  "location": "Delhi, India",
+  "social": {
+    "github": "https://github.com/Anshit2723",
+    "linkedin": "https://www.linkedin.com/in/anshit-chaturvedi/",
+    "email": "mailto:chaturvedi.anshit@gmail.com"
+  },
+  "metrics": [
+    { "value": "48hrs \u2192 15min", "label": "Manual Process Compressed" },
+    { "value": "13+", "label": "AI Systems Shipped in Year 1" },
+    { "value": "95%", "label": "Classification Accuracy" },
+    { "value": "5 months", "label": "From Hire to Client Delivery" }
+  ],
+  "highlights": [
+    "Founding engineer of a 2-person AI Lab inside a 450+ employee B2B research firm",
+    "Built and shipped 13+ production AI systems in the first year",
+    "Compressed a 48-hour manual process to 15-30 minutes",
+    "Delivered client-facing AI presentation at 5 months — unprecedented at that seniority",
+    "Voice AI system that outperformed commercial vendors"
+  ]
+}

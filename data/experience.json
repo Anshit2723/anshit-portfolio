@@ -1,0 +1,48 @@
+{
+  "timeline": [
+    {
+      "period": "Feb 2026 — Present",
+      "role": "Lead AI Engineer",
+      "company": "Phronesis Partners — AI Lab",
+      "type": "promotion",
+      "description": "Promoted to Lead AI Engineer. Leading architecture and delivery of production AI systems across the organization.",
+      "highlights": [
+        "Architecting next-generation agentic systems for enterprise workflows",
+        "Mentoring and scaling the AI Lab's technical capabilities",
+        "Driving AI adoption across business units"
+      ]
+    },
+    {
+      "period": "Jan 2024 — Feb 2026",
+      "role": "Research Associate → Founding AI Engineer",
+      "company": "Phronesis Partners — AI Lab",
+      "type": "founding",
+      "description": "Joined as Research Associate. AI Lab was established 10 days later — became the founding engineer from day one. Built 13+ production AI systems in the first year.",
+      "highlights": [
+        "Built conversational AI that outperformed commercial vendors",
+        "Compressed 48-hour manual process to 15-30 minutes (90% automation)",
+        "Delivered client-facing AI presentation at 5 months into tenure",
+        "Designed multi-agent architectures including Dual-Agent Parsing and Active Probing"
+      ]
+    },
+    {
+      "period": "2023",
+      "role": "Freelance AI Engineer",
+      "company": "Independent",
+      "type": "freelance",
+      "description": "Consulting engagements in Computer Vision and LLM strategy for international clients.",
+      "highlights": [
+        "CNN image classification system — 95% accuracy, 80% manual QA time reduction (Dubai)",
+        "LLM data pipeline strategy and integration consulting (UK Fintech)"
+      ]
+    },
+    {
+      "period": "2020 — 2024",
+      "role": "B.Tech Computer Science Engineering",
+      "company": "Bennett University",
+      "type": "education",
+      "description": "Undergraduate degree in Computer Science Engineering with focus on AI/ML.",
+      "highlights": []
+    }
+  ]
+}

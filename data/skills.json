@@ -1,0 +1,53 @@
+{
+  "categories": [
+    {
+      "name": "AI & LLM Engineering",
+      "icon": "Brain",
+      "skills": [
+        "Multi-Agent Orchestration",
+        "RAG Pipelines",
+        "Active Probing Logic",
+        "LLM Evaluation & Guardrails",
+        "Speech-to-Text / Text-to-Speech",
+        "Prompt Engineering"
+      ],
+      "tools": ["CrewAI", "LangChain", "OpenAI", "Google Gemini", "Pinecone"]
+    },
+    {
+      "name": "Full-Stack Development",
+      "icon": "Code",
+      "skills": [
+        "REST API Design",
+        "Real-time WebSocket Systems",
+        "Component Architecture",
+        "State Management",
+        "Database Design"
+      ],
+      "tools": ["React", "TypeScript", "FastAPI", "Node.js", "MongoDB", "SQL"]
+    },
+    {
+      "name": "Cloud & Infrastructure",
+      "icon": "Cloud",
+      "skills": [
+        "Container Orchestration",
+        "Serverless Functions",
+        "CI/CD Pipelines",
+        "ML Model Deployment",
+        "Infrastructure as Code"
+      ],
+      "tools": ["AWS (EC2, Lambda)", "GCP (Vertex AI)", "Docker", "Git", "GitHub Actions"]
+    },
+    {
+      "name": "Data & Analytics",
+      "icon": "BarChart",
+      "skills": [
+        "Data Pipeline Design",
+        "Statistical Analysis",
+        "Computer Vision",
+        "NLP & Text Processing",
+        "Dashboard Development"
+      ],
+      "tools": ["Python", "Pandas", "NumPy", "Streamlit", "Matplotlib"]
+    }
+  ]
+}
